@@ -50,12 +50,12 @@ void WeekendOrNot(int num)
 int lever = 0;
 while (lever == 0)
 {
-    Console.WriteLine("Здравствуйте, пользователь!");
+    Console.WriteLine("Здравствуйте, дорогой ревьюер!");
     Console.WriteLine();
-    Console.WriteLine("Что бы вы хотели сегодня узнать?");
-    Console.WriteLine("Показать меню? - нажмите Y");
-    Console.WriteLine("Выйти - нажмите Q");
-    var UserIn1 = Console.ReadLine();
+    Console.WriteLine("Какое задание Вы хотели бы проверить?");
+    Console.WriteLine("Показать меню? - введите Y");
+    Console.WriteLine("Выйти - введите Q");
+    string UserIn1 = new (Console.ReadLine());
     if (UserIn1.ToLower() == "y")
     {
         lever = 1;
@@ -69,9 +69,9 @@ while (lever == 0)
         Console.Clear();
         Console.WriteLine("Меню: ");
         Console.WriteLine();
-        Console.WriteLine("1. Показать вторую цифру числа");
-        Console.WriteLine("2. Показать третью цифру числа");
-        Console.WriteLine("3. Этот день выходной?");
+        Console.WriteLine("1. Задача 10: Вторая цифра трехзначного числа");
+        Console.WriteLine("2. Задача 13: Показать третью цифру числа");
+        Console.WriteLine("3. Задача 15: Этот день выходной?");
         Console.WriteLine();
         Console.WriteLine("Введите номер пункта или нажмите 0 для выхода: ");
         int UserIn2 = Convert.ToInt32(Console.ReadLine());
@@ -84,7 +84,7 @@ while (lever == 0)
             FindSecondDigit(num);
             Console.WriteLine("Нажмите M, чтобы вернуться в Меню");
             Console.WriteLine("Нажмите Q для выхода");
-            string UserIn3 = Console.ReadLine(); 
+            string UserIn3 = new (Console.ReadLine()); 
             if (UserIn3.ToLower() == "m")
             {
                 lever = 1;
@@ -102,7 +102,8 @@ while (lever == 0)
             FindThirdDigit(num);
             Console.WriteLine("Нажмите M, чтобы вернуться в Меню");
             Console.WriteLine("Нажмите Q для выхода");
-            string UserIn3 = Console.ReadLine(); 
+            string UserIn3 = new (Console.ReadLine());
+             
             if (UserIn3.ToLower() == "m")
             {
                 lever = 1;
@@ -120,16 +121,22 @@ while (lever == 0)
             WeekendOrNot(numm);
             Console.WriteLine("Нажмите M, чтобы вернуться в Меню");
             Console.WriteLine("Нажмите Q для выхода");
-            string UserIn4 = Console.ReadLine(); 
+            string UserIn4 = new (Console.ReadLine()); 
             if (UserIn4.ToLower() == "m")
             {
                 lever = 1;
             }
-            else if (UserIn3.ToLower() == "q")
+            else if (UserIn4.ToLower() == "q")
             {
                 lever = -1;
             }
-
+        
+        }
+        else if (UserIn2 == 0)
+        {
+            Console.Clear();
+            lever = -1;
         }
     }
 }
+Console.WriteLine("Всего доброго!");
