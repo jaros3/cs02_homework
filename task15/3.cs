@@ -18,4 +18,6 @@ else if ((dayNumber > 5 && dayNumber <= 7) || (dayNumber >= 13 && dayNumber <= 1
 {
     Console.WriteLine("it's a day of rest");
 }
-//git commit -m "complete homework"
+else{
+    Console.WriteLine("end of mounth");
+}
