@@ -9,14 +9,17 @@ int number = int.Parse(Console.ReadLine()); // чтение строки и пр
 
 int original = number; // сохранение оригинального числа в переменной 
 
-while(number > 999) {
+while(number > 999) 
+{
     number = number / 10; //цикл делим на 10 пока число больше 999
 }
-if(number >= 100) {
+if(number >= 100) 
+{
     int result = number % 10; //еслч число больше или равно 100, то полуаем остаток от деления на 10, что является третьей слева цифрой
     Console.WriteLine($" Третья цифра числа от {original} это {result}"); 
 }
-else {
+else 
+{
     Console.WriteLine($"Третьей цифры у числа {original} нет");
 }
 
