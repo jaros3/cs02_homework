@@ -3,13 +3,16 @@
 Console.WriteLine("Введите цифру ");
 int digit = int.Parse(Console.ReadLine());
 
-if(digit <= 5 && digit > 0) {
+if(digit <= 5 && digit > 0) 
+{
     Console.WriteLine($"День {digit} будний" );
 }
-else if(digit <= 7 && digit > 0) {
+else if(digit <= 7 && digit > 0) 
+{
     Console.WriteLine($"День {digit} выходной");
 }
-else {
+else 
+{
     Console.WriteLine($"День {digit} введен неверно");
 }
 
