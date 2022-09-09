@@ -9,6 +9,6 @@ int digit = (number / 10) % 10;
 if (number < 100 || number > 999)
     Console.WriteLine($"Число {number} не трехзначное!");
 else 
-    Console.Write($"Вторая цифра этого числа {digit}");
+    Console.WriteLine($"Вторая цифра этого числа {digit}");
 
 
