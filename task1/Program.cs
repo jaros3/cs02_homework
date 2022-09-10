@@ -21,21 +21,23 @@
 //     Console.WriteLine($"Число {abcde} не является палиндромом");
 // }
 
-// Второй вариант решения
+//Второй вариант решения
+
 Console.WriteLine("Введите число ");
 string abcde = Console.ReadLine()!;
 
-bool isPalindrom = true;
-//предполагаем, что введенное число палиндром (проверяем до середины числа циклом противолежащие элементы, если цифры не равны то isPolindrom = false)
-for (int index = 0; index <= abcde.Length/2; index++)
-{  
-    if (abcde[index] != abcde[abcde.Length - index - 1])
+bool isPalindrom(string abcde)
+{
+    for (int index = 0; index <= abcde.Length / 2; index++)
     {
-        isPalindrom = false;
-        break;
+        if (abcde[index] != abcde[abcde.Length - index - 1])
+        {
+            return false;
+        }
     }
-} 
-if (isPalindrom)
+    return true;
+}
+if (isPalindrom(abcde))
 {
     Console.WriteLine($"Число {abcde} является палиндромом");
 }
@@ -47,19 +49,8 @@ else
 
 
 
-//int [] numbers = new int [5];
 
-// for (int index = 0; index < numbers.Length; index++) ;
-// {
-//     if (numbers[index] == numbers[numbers.Length - index])
-//     {
-//         break;
-//         Console.WriteLine($"Число {numbers} является палиндромом");
-//     }
-//     else
-//     {
-//         Console.WriteLine($"Число {numbers} не является палиндромом");
-//     }
+
 
 
 
