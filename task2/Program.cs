@@ -14,7 +14,13 @@ int xB = int.Parse(parts2[0]);
 int yB = int.Parse(parts2[1]);
 int zB = int.Parse(parts2[2]);
 
-double distance = Math.Sqrt(Math.Pow(xA - xB, 2) + Math.Pow(yA - yB,2) + Math.Pow(zA - zB,2));
+double distance(int xA, int yA, int zA, int xB, int yB, int zB)
+{
+    return Math.Sqrt(Math.Pow(xA - xB, 2) + Math.Pow(yA - yB, 2) + Math.Pow(zA - zB, 2));
+}
+Console.WriteLine($"Расстояние между точками A и B = {distance(xA, yA, zA, xB, yB, zB):F2}");
 
-Console.WriteLine($"Расстояние между точками A и B = {distance:F2}");
+
+
+
 
